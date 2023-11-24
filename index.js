@@ -1,8 +1,17 @@
 let currentNumber = 1;
-function nextUp(){
+document.querySelectorAll('.number-cell').forEach(cell => {
+    cell.addEventListener('click', function() {
+        currentNumber = parseInt(this.textContent);
+        updateDisplay();
+    });
+});
+
+function nextUp() {
     currentNumber++;
     updateDisplay();
 }
-function updateDisplay(){
-    document.getElementById('numberDisplay').textContent = currentNumber;
+
+
+function updateDisplay() {
+    document.getElementById('numberBox').textContent = currentNumber;
 }

@@ -1,58 +1,68 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Arial', sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
     margin: 0;
-    background-color: plum;
+    background-color: lightpink;
 }
 
 .container {
     text-align: center;
-    background-color:fuchsia;
-    padding: 80px;
+    background-color: #fff;
+    padding: 20px;
     border-radius: 10px;
-    border-color: #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
     color: #333;
 }
 
-.number-display {
-    font-size: 2em;
-    margin: 20px 0;
-    padding: 5px;
-   
+.number-box {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.number-cell {
+    padding: 10px;
+    background-color: fuchsia; 
     color: #fff;
-    border-radius: 19px;
-    box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+    text-align: center;
+    border-radius: 5px;
+     cursor: pointer;
 }
 
 button {
-    padding: 20px;
+    padding: 10px;
+    margin: 15px;
     font-size: 1em;
-    background-color:fuchsia ;
-    border-radius: 50px;
+    background-color: #af4c77; 
+    color: #fff;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
-    
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #278cae;
+    background-color: #a0455f; 
 }
+
 @media only screen and (max-width: 600px) {
     .container {
         padding: 10px;
     }
 
-    .number-display {
+    .number-cell {
         font-size: 1.5em;
     }
 
     button {
-        padding: 8px 16px;
+        padding: 15px;
         font-size: 0.9em;
     }
 }
